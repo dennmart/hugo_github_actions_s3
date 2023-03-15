@@ -1,0 +1,3 @@
+baseURL = 'https://dennis-static-site.s3.amazonaws.com'
+languageCode = 'en-us'
+title = 'Deploy Hugo Site to Amazon S3 with GitHub Actions - Example Project'
