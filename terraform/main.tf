@@ -74,6 +74,9 @@ resource "aws_iam_role" "github_actions_role" {
           "Condition" : {
             "StringEquals" : {
               "token.actions.githubusercontent.com:aud" : aws_iam_openid_connect_provider.github_oidc.client_id_list[0]
+            },
+            "StringLike" : {
+              "token.actions.githubusercontent.com:sub" : "repo:dennmart/hugo_github_actions_s3:*"
             }
           }
         }
