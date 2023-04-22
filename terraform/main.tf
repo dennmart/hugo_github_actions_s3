@@ -84,3 +84,8 @@ resource "aws_iam_role" "github_actions_role" {
     }
   )
 }
+
+# Outputs the IAM role ARN, which we'll use in GitHub Actions.
+output "iam_role_arn" {
+  value = aws_iam_role.github_actions_role.arn
+}
